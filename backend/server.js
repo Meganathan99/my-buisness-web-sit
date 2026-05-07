@@ -513,5 +513,5 @@ app.get('/api/promo-codes/validate/:code', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Backend server running on http://localhost:${PORT}`);
+    console.log(`Backend server running on https://spire-backend.onrender.com:${PORT}`);
 });
