@@ -16,7 +16,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: 'Home', path: '/Home' },
+    { name: 'Home', path: '/home' },
     { name: 'Products', path: '/products' },
     { name: 'Builder', path: '/builder' },
     { name: 'Services', path: '/services' },
@@ -30,7 +30,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">
-          SPIRE
+          SPIRE TECHNOLOGIES
         </Link>
 
         {/* Desktop Links (Hidden on Mobile) */}
