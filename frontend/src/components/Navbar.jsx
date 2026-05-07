@@ -27,10 +27,16 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm">
       <nav className="max-w-[1280px] mx-auto flex justify-between items-center px-6 h-20 font-['Space_Grotesk']">
         
-    {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">
-         SPIRE TECHNOLOGIES
-        </Link>
+    <Link to="/" className="flex items-center gap-2 group">
+  <img 
+    src="/logo.png" 
+    alt="SPIRE Logo" 
+    className="w-10 h-10 object-cover rounded-lg border border-slate-200 dark:border-slate-800 group-hover:scale-105 transition-transform"
+  />
+  <span className="text-2xl font-bold tracking-tighter text-slate-900 dark:text-slate-50">
+    SPIRE TECHNOLOGIES
+  </span>
+</Link>
 
         {/* Desktop Links (Hidden on Mobile) */}
         <div className="hidden md:flex items-center gap-8">
