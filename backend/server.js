@@ -512,6 +512,10 @@ app.get('/api/promo-codes/validate/:code', (req, res) => {
 });
 
 // Start server
+// Verification route to confirm the server is live
+app.get('/', (req, res) => {
+    res.send('Spire Backend is Live and Running!');
+});
 app.listen(PORT, () => {
     console.log(`Backend server running on https://spire-backend.onrender.com:${PORT}`);
 });
