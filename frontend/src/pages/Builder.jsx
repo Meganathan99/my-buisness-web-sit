@@ -25,7 +25,7 @@ export default function Builder() {
   ];
 
   useEffect(() => {
-    fetch('${import.meta.env.VITE_API_URL}/api/pc-parts')
+    fetch('https://spire-backend.onrender.com/api/pc-parts')
       .then(res => res.json())
       .then(data => {
         setParts(data);
@@ -104,7 +104,7 @@ export default function Builder() {
     };
 
     try {
-      const res = await fetch('${import.meta.env.VITE_API_URL}/api/orders', {
+      const res = await fetch('https://spire-backend.onrender.com/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData)
