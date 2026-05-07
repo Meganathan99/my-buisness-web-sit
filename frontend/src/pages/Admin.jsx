@@ -34,7 +34,7 @@ export default function Admin() {
 
   const fetchProducts = () => {
     setLoading(true);
-    fetch('http://localhost:3001/api/products')
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then(res => res.json())
       .then(data => {
         setProducts(data);
@@ -48,7 +48,7 @@ export default function Admin() {
 
   const fetchOrders = () => {
     setLoading(true);
-    fetch('${import.meta.env.VITE_API_URL}/api/orders')
+    fetch(`${import.meta.env.VITE_API_URL}/api/orders`)
       .then(res => res.json())
       .then(data => {
         setOrders(data);
@@ -62,7 +62,7 @@ export default function Admin() {
 
   const fetchPromoCodes = () => {
     setLoading(true);
-    fetch('${import.meta.env.VITE_API_URL}/api/promo-codes')
+    fetch(`${import.meta.env.VITE_API_URL}/api/promo-codes`)
       .then(res => res.json())
       .then(data => {
         setPromoCodes(data);
@@ -76,7 +76,7 @@ export default function Admin() {
 
   const fetchPcParts = () => {
     setLoading(true);
-    fetch('${import.meta.env.VITE_API_URL}/api/pc-parts')
+    fetch(`${import.meta.env.VITE_API_URL}/api/pc-parts`)
       .then(res => res.json())
       .then(data => {
         setPcParts(data);
@@ -194,7 +194,7 @@ export default function Admin() {
     e.preventDefault();
     const url = editingProduct 
       ? `${import.meta.env.VITE_API_URL}/api/products/${editingProduct.id}`
-      : '${import.meta.env.VITE_API_URL}/api/products';
+      : `${import.meta.env.VITE_API_URL}/api/products`;
     const method = editingProduct ? 'PUT' : 'POST';
     fetch(url, {
       method,
@@ -212,7 +212,7 @@ export default function Admin() {
     e.preventDefault();
     const url = editingPromo 
       ? `${import.meta.env.VITE_API_URL}/api/promo-codes/${editingPromo.id}`
-      : '${import.meta.env.VITE_API_URL}/api/promo-codes';
+      : `${import.meta.env.VITE_API_URL}/api/promo-codes`;
     const method = editingPromo ? 'PUT' : 'POST';
     fetch(url, {
       method,
@@ -230,7 +230,7 @@ export default function Admin() {
     e.preventDefault();
     const url = editingPcPart 
       ? `${import.meta.env.VITE_API_URL}/api/pc-parts/${editingPcPart.id}`
-      : '${import.meta.env.VITE_API_URL}/api/pc-parts';
+      : `${import.meta.env.VITE_API_URL}/api/pc-parts`;
     const method = editingPcPart ? 'PUT' : 'POST';
     fetch(url, {
       method,
